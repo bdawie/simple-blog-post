@@ -1,0 +1,10 @@
+<section *ngIf="!loading">
+  <h3>Articles by: {{user.username}}</h3>
+  <mat-card *ngFor="let authorPost of posts">
+    <mat-card-title>{{authorPost.title}}</mat-card-title>
+    <mat-card-content>{{authorPost.body}}</mat-card-content>
+  </mat-card>
+
+  <a [routerLink]="['/main-view']"> <- Back</a>
+</section>
+

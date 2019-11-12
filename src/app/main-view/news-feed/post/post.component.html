@@ -1,0 +1,5 @@
+<mat-card *ngIf="(user$ | async) as user">
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-subtitle> <a [routerLink]="['/author', user.id]" >By: {{user.username}}</a> </mat-card-subtitle>
+  <mat-card-content>{{post.body}}</mat-card-content>
+</mat-card>
